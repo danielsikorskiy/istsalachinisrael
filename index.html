@@ -21,6 +21,29 @@
     <img class="avatar" src="img/tsalach.jpg" alt="Eran Tsalach, currently not on a plane">
   </header>
 
+  <section class="action">
+    <h2>Send Tsalach to a customer</h2>
+    <p>One click. Random country. Real flight. Zero excuses.</p>
+    <button id="sendButton" type="button">Book the flight ✈️</button>
+    <div class="pass" id="boardingPass" hidden>
+      <div class="pass-row">
+        <div><span class="k">Passenger</span><span class="v">TSALACH / ERAN</span></div>
+        <div><span class="k">Class</span><span class="v">Customer</span></div>
+      </div>
+      <div class="pass-row big">
+        <div><span class="k">From</span><span class="v">TLV</span></div>
+        <div class="plane">✈</div>
+        <div><span class="k">To</span><span class="v" id="passCode">JFK</span></div>
+      </div>
+      <div class="pass-row">
+        <div><span class="k">Meeting</span><span class="v" id="passMeeting">-</span></div>
+        <div><span class="k">Gate</span><span class="v" id="passGate">-</span></div>
+      </div>
+      <p class="pass-note" id="passNote"></p>
+      <a class="pass-link" id="passLink" href="#" target="_blank" rel="noopener">Open the flight on Google Flights →</a>
+    </div>
+  </section>
+
   <section class="stats">
     <div class="stat">
       <span class="num" id="hqTimer">0</span>
@@ -51,33 +74,13 @@
     <div class="grid" id="galleryGrid"></div>
   </section>
 
-  <section class="action">
-    <h2>Send Tsalach to a customer</h2>
-    <p>One click. Zero excuses.</p>
-    <button id="sendButton" type="button">Book the flight ✈️</button>
-    <div class="pass" id="boardingPass" hidden>
-      <div class="pass-row">
-        <div><span class="k">Passenger</span><span class="v">TSALACH / ERAN</span></div>
-        <div><span class="k">Class</span><span class="v">Customer</span></div>
-      </div>
-      <div class="pass-row big">
-        <div><span class="k">From</span><span class="v">TLV</span></div>
-        <div class="plane">✈</div>
-        <div><span class="k">To</span><span class="v" id="passCode">JFK</span></div>
-      </div>
-      <div class="pass-row">
-        <div><span class="k">Meeting</span><span class="v" id="passMeeting">-</span></div>
-        <div><span class="k">Gate</span><span class="v" id="passGate">-</span></div>
-      </div>
-      <p class="pass-note" id="passNote"></p>
-    </div>
-  </section>
 
   <footer>
     <p>“Tsalach should be flying around the world meeting customers, not sitting in HQ.” · the CEO, every week</p>
     <p class="tiny">Made with love at Wonderful. No Tsalachs were harmed.</p>
   </footer>
 
+  <script src="countries.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

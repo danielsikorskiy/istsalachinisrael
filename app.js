@@ -18,6 +18,16 @@ const EXCUSES = [
   "Cancelled: Tsalach forgot his passport at the office",
 ];
 
+const MEETINGS = [
+  "Bank CIO, 9:00 sharp",
+  "Telco exec dinner",
+  "Insurance board review",
+  "Retail voice agent demo",
+  "Airline contact center",
+  "Government pilot signing",
+  "Utility customer QBR",
+];
+
 const GALLERY = [
   { src: "img/01_tel_aviv_hq.jpg", caption: "Reality: HQ, staring at the map. Again." },
   { src: "img/02_business_class.jpg", caption: "The dream: business class, laptop open, customers waiting." },
@@ -70,18 +80,36 @@ function startHqTimer() {
   }, 1000);
 }
 
+function getPlaceName(destination) {
+  if (destination.city === destination.country) {
+    return destination.city;
+  }
+
+  return `${destination.city}, ${destination.country}`;
+}
+
+function getGoogleFlightsUrl(destination) {
+  const departure = new Date(Date.now() + 7 * 24 * 60 * 60_000).toISOString().slice(0, 10);
+  const query = `Flights to ${destination.code} from TLV on ${departure} one way`;
+  return `https://www.google.com/travel/flights?q=${encodeURIComponent(query)}`;
+}
+
 function bookFlight() {
-  const destination = getRandomItem(DESTINATIONS);
+  const destination = getRandomItem(COUNTRIES);
+  const flightsUrl = getGoogleFlightsUrl(destination);
+  window.open(flightsUrl, "_blank", "noopener");
+
   document.getElementById("passCode").textContent = destination.code;
-  document.getElementById("passMeeting").textContent = destination.meeting;
+  document.getElementById("passMeeting").textContent = getRandomItem(MEETINGS);
   document.getElementById("passGate").textContent = `B${Math.ceil(Math.random() * 12)}`;
-  document.getElementById("passNote").textContent = `Booked to ${destination.city}. Status: he'll probably still be in HQ tomorrow.`;
+  document.getElementById("passNote").textContent = `${getPlaceName(destination)}. He'll probably still be in HQ tomorrow.`;
+  document.getElementById("passLink").href = flightsUrl;
   document.getElementById("boardingPass").hidden = false;
 
   const answer = document.getElementById("answer");
   answer.textContent = "FOR NOW.";
   answer.classList.add("flying");
-  document.getElementById("subline").textContent = `Boarding pass issued to ${destination.city}. We'll believe it when we see it.`;
+  document.getElementById("subline").textContent = `Flight to ${destination.country} found. We'll believe it when we see it.`;
 }
 
 renderDepartures();

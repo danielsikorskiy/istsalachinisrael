@@ -30,12 +30,12 @@ section, header, footer {
 
 h2 { font-size: 1.6rem; margin: 0 0 20px; }
 
-.hero { text-align: center; padding-top: 72px; }
+.hero { text-align: center; padding-top: 40px; padding-bottom: 16px; }
 .eyebrow { color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; }
 .hero h1 { font-size: clamp(2rem, 6vw, 3.6rem); margin: 8px 0; }
 
 .answer {
-  font-size: clamp(5rem, 22vw, 12rem);
+  font-size: clamp(4.5rem, 18vw, 9rem);
   font-weight: 900;
   line-height: 1;
   color: var(--red);
@@ -46,13 +46,13 @@ h2 { font-size: 1.6rem; margin: 0 0 20px; }
 .sub { font-size: 1.25rem; color: var(--muted); }
 
 .avatar {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   object-position: 60% 60%;
   border: 6px solid var(--sun);
-  margin-top: 24px;
+  margin-top: 12px;
   animation: bob 3s ease-in-out infinite;
 }
 
@@ -141,3 +141,6 @@ button:hover { transform: scale(1.05); }
 
 footer { text-align: center; color: var(--muted); }
 .tiny { font-size: .8rem; opacity: .7; }
+
+.action { padding-top: 0; }
+.pass-link { display: inline-block; margin-top: 12px; color: var(--sky-2); font-weight: 700; }
