@@ -19,7 +19,10 @@ const EXCUSES = [
 ];
 
 const GALLERY = [
-  // Filled with Slopus images: { src: "img/....jpg", caption: "..." }
+  { src: "img/01_tel_aviv_hq.jpg", caption: "Reality: HQ, staring at the map. Again." },
+  { src: "img/02_business_class.jpg", caption: "The dream: business class, laptop open, customers waiting." },
+  { src: "img/03_tokyo_customer.jpg", caption: "Tokyo. One handshake, one signed telco." },
+  { src: "img/04_new_york_contracts.jpg", caption: "New York. Suitcase full of contracts." },
 ];
 
 function getRandomItem(items) {
