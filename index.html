@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Is Tsalach in Israel?</title>
+  <meta name="description" content="Live status: is Eran Tsalach in HQ again instead of flying around the world meeting customers?">
+  <meta property="og:title" content="Is Tsalach in Israel?">
+  <meta property="og:description" content="Yes. Again. Someone get this man a boarding pass.">
+  <meta property="og:image" content="https://istsalachinisrael.com/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Live status · updated every second</p>
+    <h1>Is Tsalach in Israel?</h1>
+    <div class="answer" id="answer">YES.</div>
+    <p class="sub" id="subline">Sitting in HQ. Again. The customers are waiting.</p>
+    <img class="avatar" src="img/tsalach.jpg" alt="Eran Tsalach, currently not on a plane">
+  </header>
+
+  <section class="stats">
+    <div class="stat">
+      <span class="num" id="hqTimer">0</span>
+      <span class="label">seconds in HQ since you opened this page</span>
+    </div>
+    <div class="stat">
+      <span class="num">0</span>
+      <span class="label">customers met abroad today</span>
+    </div>
+    <div class="stat">
+      <span class="num">∞</span>
+      <span class="label">times the CEO said “he should be on a plane”</span>
+    </div>
+  </section>
+
+  <section class="board">
+    <h2>Departures · Ben Gurion TLV</h2>
+    <div class="board-wrap"><table>
+      <thead>
+        <tr><th>Time</th><th>Flight</th><th>Destination</th><th>Passenger</th><th>Status</th></tr>
+      </thead>
+      <tbody id="departures"></tbody>
+    </table></div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>What could have been</h2>
+    <div class="grid" id="galleryGrid"></div>
+  </section>
+
+  <section class="action">
+    <h2>Send Tsalach to a customer</h2>
+    <p>One click. Zero excuses.</p>
+    <button id="sendButton" type="button">Book the flight ✈️</button>
+    <div class="pass" id="boardingPass" hidden>
+      <div class="pass-row">
+        <div><span class="k">Passenger</span><span class="v">TSALACH / ERAN</span></div>
+        <div><span class="k">Class</span><span class="v">Customer</span></div>
+      </div>
+      <div class="pass-row big">
+        <div><span class="k">From</span><span class="v">TLV</span></div>
+        <div class="plane">✈</div>
+        <div><span class="k">To</span><span class="v" id="passCode">JFK</span></div>
+      </div>
+      <div class="pass-row">
+        <div><span class="k">Meeting</span><span class="v" id="passMeeting">-</span></div>
+        <div><span class="k">Gate</span><span class="v" id="passGate">-</span></div>
+      </div>
+      <p class="pass-note" id="passNote"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>“Tsalach should be flying around the world meeting customers, not sitting in HQ.” · the CEO, every week</p>
+    <p class="tiny">Made with love at Wonderful. No Tsalachs were harmed.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
