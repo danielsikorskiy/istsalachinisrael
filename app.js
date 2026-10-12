@@ -102,14 +102,14 @@ function bookFlight() {
   document.getElementById("passCode").textContent = destination.code;
   document.getElementById("passMeeting").textContent = getRandomItem(MEETINGS);
   document.getElementById("passGate").textContent = `B${Math.ceil(Math.random() * 12)}`;
-  document.getElementById("passNote").textContent = `${getPlaceName(destination)}. He'll probably still be in HQ tomorrow.`;
+  document.getElementById("passNote").textContent = `${getPlaceName(destination)}. He'll probably still be in Italy tomorrow.`;
   document.getElementById("passLink").href = flightsUrl;
   document.getElementById("boardingPass").hidden = false;
 
   const answer = document.getElementById("answer");
   answer.textContent = "FOR NOW.";
   answer.classList.add("flying");
-  document.getElementById("subline").textContent = `Flight to ${destination.country} found. We'll believe it when we see it.`;
+  document.getElementById("subline").textContent = `Flight from Italy to ${destination.country} found. He'll finish the bottle first.`;
 }
 
 renderDepartures();

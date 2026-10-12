@@ -144,3 +144,21 @@ footer { text-align: center; color: var(--muted); }
 
 .action { padding-top: 0; }
 .pass-link { display: inline-block; margin-top: 12px; color: var(--sky-2); font-weight: 700; }
+
+.evidence {
+  margin: 24px auto 0;
+  max-width: 420px;
+}
+
+.evidence img {
+  width: 100%;
+  border-radius: 16px;
+  border: 6px solid var(--red);
+  transform: rotate(-2deg);
+}
+
+.evidence figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: .95rem;
+}
